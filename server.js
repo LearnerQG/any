@@ -1,32 +1,4 @@
 
-
-Skip to content
-Pulls
-Issues
-Marketplace
-Explore
-@LearnerQG
-TylerPottsDev /
-node-login-passport
-Public
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-node-login-passport/app.js /
-@TylerPottsDev
-TylerPottsDev init
-Latest commit ce57146 on Jan 6, 2021
-History
-1 contributor
-135 lines (109 sloc) 2.9 KB
 const express			= require('express');
 const session			= require('express-session');
 const hbs				= require('express-handlebars');
@@ -161,9 +133,7 @@ app.get('/setup', async (req, res) => {
 
 app.listen(3000, () => {
 	console.log("Listening on port 3000");
-});
-
-    © 2022 GitHub, Inc.
+}
 
     Terms
     Privacy
