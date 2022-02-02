@@ -36,8 +36,8 @@ const User = mongoose.model('User', UserSchema);
 
 
 // Middleware
-app.engine('hbs', hbs({ extname: '.hbs' }));
-app.set('view engine', 'hbs');
+// app.engine('hbs', hbs({ extname: '.hbs' }));
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(session({
 	secret: "verygoodsecret",
