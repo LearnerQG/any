@@ -117,20 +117,22 @@ app.get('/logout', function (req, res) {
 
 // Setup our admin user
 app.get('/setup', async (req, res) => {
-	const exists = await User.exists({ username: "admin" });
+	const exists = await User.find({ username:req.body.username});
 
-	if (exists) {
-		res.redirect('/login');
-		return;
-	};
+
+	// if (exists) {
+	//res.redirect('/login');
+	//	return;
+	//};
 
 	bcrypt.genSalt(10, function (err, salt) {
 		if (err) return next(err);
-		bcrypt.hash("pass", salt, function (err, hash) {
-			if (err) return next(err);
+bcrypt.hash("passwo", salt
+, function (err, hash) {
+		if (err) return next(err);
 			
 			const newAdmin = new User({
-				username: "admin",
+				username: "admin3",
 				password: hash
 			});
 
