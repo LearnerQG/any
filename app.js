@@ -6,8 +6,10 @@ const passport			= require('passport');
 const localStrategy		= require('passport-local').Strategy;
 const bcrypt			= require('bcrypt');
 const app				= express();
+require('dotenv').config();
 
-const mongoose = require('mongoose')
+const expressLayouts = require('express-ejs-layouts');
+
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true});
 // options usecreateindex, usefindandmodify are not supported
