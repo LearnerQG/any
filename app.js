@@ -63,8 +63,9 @@ passport.deserializeUser(function (id, done) {
 	});
 });
 
+
 passport.use(new localStrategy(function (username, password, done) {
-	User.findOne({ username: username }, function (err, user) {
+	User.findOne({ username: username, function (err, user) {
 		if (err) return done(err);
 		if (!user) return done(null, false, { message: 'Incorrect username.' });
 
@@ -74,7 +75,7 @@ passport.use(new localStrategy(function (username, password, done) {
 			
 			return done(null, user);
 		});
-	});
+	}});
 }));
 
 function isLoggedIn(req, res, next) {
